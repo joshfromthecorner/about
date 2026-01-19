@@ -40,6 +40,9 @@ export default function Home() {
   return (
     <>
       <main className="max-w-xl mx-auto px-6 py-20 relative min-h-screen font-light">
+        <div className="absolute top-6 right-6">
+          <ThemeSwitch />
+        </div>
         <section className="flex items-center">
           <Image
             alt="Author"
@@ -103,9 +106,6 @@ export default function Home() {
             })}
           </div>
         </section>
-        <div className="px-6 absolute left-0 bottom-6">
-          <ThemeSwitch />
-        </div>
       </main>
     </>
   );
