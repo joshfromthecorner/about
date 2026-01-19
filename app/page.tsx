@@ -55,20 +55,6 @@ export default function Home() {
             <p className="text-slate-600 dark:text-slate-300 text-sm">
               {generalData.jobTitle}
             </p>
-            {generalData.website ? (
-              <span className="text-sm text-slate-400 dark:text-slate-400">
-                <a
-                  href={generalData.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline"
-                >
-                  {generalData.website
-                    .replace(/(^\w+:|^)\/\//, "")
-                    .replace("www.", "")}
-                </a>
-              </span>
-            ) : null}
           </div>
         </section>
         <section className="my-9 text-sm">

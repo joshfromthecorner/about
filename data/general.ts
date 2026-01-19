@@ -8,7 +8,7 @@ export const generalData = {
     {
       label: "Email",
       value: "joshuavandenhoek@outlook.com",
-      href: "mailto:john.doe@gmail.com",
+      href: "mailto:joshuavandenhoek@outlook.com",
     },
     {
       label: "LinkedIn",
