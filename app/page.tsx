@@ -47,6 +47,7 @@ export default function Home() {
             width={80}
             height={80}
             className="rounded-full object-cover"
+            unoptimized
           />
           <div className="ml-4">
             <h1 className="mb-0.5 text-xl text-slate-900 dark:text-slate-100">
