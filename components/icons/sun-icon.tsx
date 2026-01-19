@@ -1,6 +1,19 @@
 import React from 'react';
 
-const SunIcon = ({
+interface SunIconProps {
+  size?: number;
+  color?: string;
+  strokeWidth?: number;
+  background?: string;
+  opacity?: number;
+  rotation?: number;
+  shadow?: number;
+  flipHorizontal?: boolean;
+  flipVertical?: boolean;
+  padding?: number;
+}
+
+const SunIcon: React.FC<SunIconProps> = ({
   size = undefined,
   color = '#000000',
   strokeWidth = 2,

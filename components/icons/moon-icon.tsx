@@ -1,6 +1,19 @@
 import React from 'react';
 
-const MoonIcon = ({
+interface MoonIconProps {
+  size?: number;
+  color?: string;
+  strokeWidth?: number;
+  background?: string;
+  opacity?: number;
+  rotation?: number;
+  shadow?: number;
+  flipHorizontal?: boolean;
+  flipVertical?: boolean;
+  padding?: number;
+}
+
+const MoonIcon: React.FC<MoonIconProps> = ({
   size = undefined,
   color = '#000000',
   strokeWidth = 2,
