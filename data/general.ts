@@ -1,30 +1,19 @@
 export const generalData = {
-  name: "John Doe",
+  name: "Joshua van den Hoek",
   avatar: "https://github.com/ibelick.png",
-  jobTitle: "Senior Front-End Developer",
-  website: "https://www.julienthibeaut.xyz",
+  jobTitle: "Product/UX Designer at Valsplat",
   about:
-    "Hey there! I'm John, a senior front-end developer with 10 years of experience in web development.",
+    "Helping teams create meaningful products through research-driven design. Previously at OVpay, BNG Bank, PostNL, Dutch Ministry of Health, Kiesraad, Albert Heijn and Air France - KLM. ",
   contacts: [
     {
       label: "Email",
-      value: "john.doe@gmail.com",
+      value: "joshuavandenhoek@outlook.com",
       href: "mailto:john.doe@gmail.com",
     },
     {
-      label: "Twitter",
-      value: "ibelick",
-      href: "https://twitter.com/ibelick",
-    },
-    {
-      label: "Github",
-      value: "ibelick",
-      href: "https://github.com/ibelick",
-    },
-    {
-      label: "Read.CV",
-      value: "ibelick",
-      href: "https://read.cv/ibelick",
+      label: "LinkedIn",
+      value: "Joshua van den Hoek",
+      href: "https://www.linkedin.com/in/joshua-van-den-hoek/",
     },
   ],
 };
