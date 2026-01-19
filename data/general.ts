@@ -3,7 +3,7 @@ export const generalData = {
   avatar: "/avatar.png",
   jobTitle: "Product/UX Designer at Valsplat",
   about:
-    "Helping teams create meaningful products through research-driven design. Previously at OVpay, BNG Bank, PostNL, Dutch Ministry of Health, Kiesraad, Albert Heijn and Air France - KLM. ",
+    "Helping teams create meaningful products through research-driven design. Previously at OVpay, NVM, BNG Bank, PostNL, Dutch Ministry of Health, Kiesraad, Albert Heijn and Air France - KLM. ",
   contacts: [
     {
       label: "Email",
