@@ -63,7 +63,7 @@ export default function Home() {
         </section>
         <section className="my-9 text-base">
           <h3 className="mb-6 text-foreground">About</h3>
-          <div className="text-muted-foreground">
+          <div className="text-muted-foreground whitespace-pre-line">
             <p>{generalData.about}</p>
           </div>
         </section>

@@ -3,7 +3,7 @@ export const generalData = {
   avatar: "/avatar.png",
   jobTitle: "Product/UX Designer at Valsplat",
   about:
-    "Helping teams create meaningful products through research-driven design. Previously at OVpay, NVM, BNG Bank, PostNL, Dutch Ministry of Health, Kiesraad, Albert Heijn and Air France - KLM. I enjoy tackling diverse design challenges and focus on bringing ideas to life, whether that's solving complex problems for clients or exploring DIY projects at home (I'm currently busy building my own furniture).",
+    "I help teams create meaningful products through research-driven design. Previously, I've worked with organizations such as OVpay, NVM, BNG Bank, PostNL, the Dutch Ministry of Health, Kiesraad, Albert Heijn, and Air France–KLM. My background spans product and UX design, design sprints, concept development, experimentation, user testing, and applied AI tools. I enjoy tackling diverse design challenges and bringing ideas to life whether that's solving complex problems for clients or building my own furniture at home.\n\nI live in Roelofarensveen with my girlfriend and our British Shorthair cat. Outside of work, I'm a big fan of Lord of the Rings, Star Wars, LEGO, and try to go skiing every year. Most weekends are spent on or next to the football pitch with my friends, father and brother.",
   contacts: [
     {
       label: "Email",
