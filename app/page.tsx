@@ -8,7 +8,7 @@ type ContentProps = Content;
 
 const Content: React.FC<ContentProps> = ({ title, items }) => {
   return (
-    <section className="my-14 text-sm">
+    <section className="my-14 text-base">
       <h3 className="mb-6 text-foreground">{title}</h3>
       <div className="flex flex-col gap-6">
         {items.map((item, index) => {
@@ -53,15 +53,15 @@ export default function Home() {
             unoptimized
           />
           <div className="ml-4">
-            <h1 className="mb-0.5 text-xl text-foreground">
+            <h1 className="mb-0.5 text-2xl text-foreground">
               {generalData.name}
             </h1>
-            <p className="text-muted-foreground text-sm">
+            <p className="text-muted-foreground text-base">
               {generalData.jobTitle}
             </p>
           </div>
         </section>
-        <section className="my-9 text-sm">
+        <section className="my-9 text-base">
           <h3 className="mb-1 text-foreground">About</h3>
           <div className="text-muted-foreground">
             <p>{generalData.about}</p>
@@ -70,7 +70,7 @@ export default function Home() {
         {contentData.map((content, index) => {
           return <Content {...content} key={index} />;
         })}
-        <section className="my-14 text-sm">
+        <section className="my-14 text-base">
           <h3 className="mb-6 text-foreground">Contact</h3>
           <div className="flex flex-col gap-6">
             {generalData.contacts.map((contact, index) => {
