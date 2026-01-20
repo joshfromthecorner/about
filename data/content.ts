@@ -3,6 +3,11 @@ export const contentData = [
     title: "Work Experience",
     items: [
       {
+        title: "Product/UX Designer at Valsplat",
+        subTitle: "Randstad, Netherlands",
+        date: "Present",
+      },
+      {
         title: "Product Designer at Brainbay",
         subTitle: "Hybrid",
         date: "jun 2025 - Present",
