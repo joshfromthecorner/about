@@ -3,35 +3,78 @@ import ThemeSwitch from "@/components/theme-switch";
 import { generalData } from "@/data/general";
 import { contentData } from "@/data/content";
 import type { Content } from "@/data/content";
+import Link from "next/link";
 
 type ContentProps = Content;
 
+type WorkExperienceItem = {
+  title: string;
+  subTitle: string;
+  date: string;
+  description?: string;
+};
+
+const ExperienceCard = ({ item }: { item: WorkExperienceItem }) => (
+  <div className="group">
+    <div className="rounded-md border border-border bg-card p-4 transition-shadow duration-300 hover:shadow-md">
+      <div className="space-y-2">
+        <div className="flex items-start justify-between gap-4">
+          <div className="flex-1">
+            <h4 className="font-medium text-foreground">{item.title}</h4>
+            <p className="text-sm text-muted-foreground mt-0.5">
+              {item.subTitle}
+            </p>
+          </div>
+          <p className="text-sm text-muted-foreground whitespace-nowrap">
+            {item.date}
+          </p>
+        </div>
+        {item.description ? (
+          <p className="text-sm text-muted-foreground mt-2">
+            {item.description}
+          </p>
+        ) : null}
+      </div>
+    </div>
+  </div>
+);
+
 const Content: React.FC<ContentProps> = ({ title, items }) => {
+  const isWorkExperience = title === "Work Experience";
+  
   return (
     <section className="my-14 text-base">
       <h3 className="mb-6 text-foreground">{title}</h3>
-      <div className="flex flex-col gap-6">
-        {items.map((item, index) => {
-          return (
-            <div className="flex" key={index}>
-              <div className="mr-8 max-w-[100px] w-full text-muted-foreground">
-                {item.date}
-              </div>
-              <div className="flex flex-col flex-1">
-                <h4 className="text-foreground">{item.title}</h4>
-                <p className="text-muted-foreground">
-                  {item.subTitle}
-                </p>
-                {item.description ? (
-                  <p className="text-muted-foreground mt-2">
-                    {item.description}
+      {isWorkExperience ? (
+        <div className="grid grid-cols-1 gap-4">
+          {items.map((item, index) => (
+            <ExperienceCard key={index} item={item} />
+          ))}
+        </div>
+      ) : (
+        <div className="flex flex-col gap-6">
+          {items.map((item, index) => {
+            return (
+              <div className="flex" key={index}>
+                <div className="mr-8 max-w-[100px] w-full text-muted-foreground">
+                  {item.date}
+                </div>
+                <div className="flex flex-col flex-1">
+                  <h4 className="text-foreground">{item.title}</h4>
+                  <p className="text-muted-foreground">
+                    {item.subTitle}
                   </p>
-                ) : null}
+                  {item.description ? (
+                    <p className="text-muted-foreground mt-2">
+                      {item.description}
+                    </p>
+                  ) : null}
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+      )}
     </section>
   );
 };
