@@ -141,7 +141,7 @@ export default function Home() {
             unoptimized
           />
           <div className="ml-4">
-            <h1 className="mb-0.5 text-2xl text-foreground">
+            <h1 className="mb-0.5 text-2xl text-foreground font-medium">
               {generalData.name}
             </h1>
             <p className="text-muted-foreground text-base">
