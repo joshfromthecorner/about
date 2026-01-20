@@ -28,7 +28,7 @@ const ThemeSwitch = () => {
       variant="outline"
       pressed={isDark}
       onPressedChange={handlePressedChange}
-      className="data-[state=on]:bg-transparent data-[state=on]:*:[svg]:fill-blue-500 data-[state=on]:*:[svg]:stroke-blue-500 border-slate-500 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800"
+      className="data-[state=on]:bg-transparent data-[state=on]:*:[svg]:fill-blue-500 data-[state=on]:*:[svg]:stroke-blue-500 border-slate-500 dark:border-slate-600 text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus-visible:ring-0 focus-visible:ring-offset-0 focus-visible:shadow-[0_0_0_1px_white,0_0_0_2px_#3b82f6]"
     >
       {isDark ? (
         <Moon size={16} strokeWidth={2} />
