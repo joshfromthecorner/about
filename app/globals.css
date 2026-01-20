@@ -87,21 +87,26 @@
     font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   }
   
-  /* Global focus styles for keyboard navigation */
+  /* Global focus styles for keyboard navigation - bright blue 1px and white 1px borders */
   *:focus-visible {
-    outline: 2px solid white;
-    outline-offset: 2px;
+    outline: none;
+    box-shadow: 
+      0 0 0 1px white,
+      0 0 0 2px #3b82f6;
   }
   
-  /* Blue ring for focus on interactive elements */
+  /* Apply to all interactive elements */
   a:focus-visible,
   button:focus-visible,
   input:focus-visible,
   textarea:focus-visible,
   select:focus-visible,
-  [tabindex]:focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-    box-shadow: 0 0 0 2px white, 0 0 0 4px var(--primary);
+  [tabindex]:focus-visible,
+  [role="button"]:focus-visible,
+  [role="link"]:focus-visible {
+    outline: none;
+    box-shadow: 
+      0 0 0 1px white,
+      0 0 0 2px #3b82f6;
   }
 }

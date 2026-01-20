@@ -84,7 +84,7 @@ export default function Home() {
                       href={contact.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline inline-flex items-center gap-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm focus-visible:outline-white"
+                      className="hover:underline inline-flex items-center gap-1 rounded-sm"
                     >
                       {contact.value}
                       <svg
