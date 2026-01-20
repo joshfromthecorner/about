@@ -12,10 +12,48 @@ type WorkExperienceItem = {
   subTitle: string;
   date: string;
   description?: string;
+  projects?: {
+    title: string;
+    description?: string;
+    link?: string;
+  }[];
+};
+
+type ProjectCardProps = {
+  project: {
+    title: string;
+    description?: string;
+    link?: string;
+  };
+};
+
+const ProjectCard = ({ project }: ProjectCardProps) => {
+  const content = (
+    <div className="group">
+      <div className="rounded-md border border-border bg-card p-3 transition-shadow duration-300 hover:shadow-md">
+        <div className="space-y-1">
+          <h5 className="font-medium text-foreground text-sm">{project.title}</h5>
+          {project.description ? (
+            <p className="text-xs text-muted-foreground">{project.description}</p>
+          ) : null}
+        </div>
+      </div>
+    </div>
+  );
+
+  if (project.link) {
+    return (
+      <Link href={project.link} target="_blank" rel="noopener noreferrer">
+        {content}
+      </Link>
+    );
+  }
+
+  return content;
 };
 
 const ExperienceCard = ({ item }: { item: WorkExperienceItem }) => (
-  <div className="group">
+  <div>
     <div className="rounded-md border border-border bg-card p-4 transition-shadow duration-300 hover:shadow-md">
       <div className="space-y-2">
         <div className="flex items-start justify-between gap-4">
@@ -36,6 +74,13 @@ const ExperienceCard = ({ item }: { item: WorkExperienceItem }) => (
         ) : null}
       </div>
     </div>
+    {item.projects && item.projects.length > 0 && (
+      <div className="mt-3 grid grid-cols-1 gap-2 ml-4">
+        {item.projects.map((project, projectIndex) => (
+          <ProjectCard key={projectIndex} project={project} />
+        ))}
+      </div>
+    )}
   </div>
 );
 

@@ -65,6 +65,11 @@ export type Content = {
     subTitle: string;
     date: string;
     description?: string;
+    projects?: {
+      title: string;
+      description?: string;
+      link?: string;
+    }[];
   }[];
 };
 
