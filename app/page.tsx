@@ -39,11 +39,28 @@ const Content: React.FC<ContentProps> = ({ title, items }) => {
 export default function Home() {
   return (
     <>
-      <main className="max-w-xl mx-auto px-6 py-20 relative min-h-screen font-light">
-        <div className="absolute top-6 right-6">
-          <ThemeSwitch />
-        </div>
-        <section className="flex items-center">
+      <div className="min-h-screen w-full relative bg-white dark:bg-neutral-900">
+        {/* Purple Glow Top */}
+        <div
+          className="absolute inset-0 z-0 pointer-events-none"
+          style={{
+            background: "transparent",
+            backgroundImage: `
+              radial-gradient(
+                circle at top center,
+                rgba(173, 109, 244, 0.5),
+                transparent 70%
+              )
+            `,
+            filter: "blur(80px)",
+            backgroundRepeat: "no-repeat",
+          }}
+        />
+        <main className="max-w-xl mx-auto px-6 py-20 relative min-h-screen font-light z-10">
+          <div className="absolute top-6 right-6 z-20">
+            <ThemeSwitch />
+          </div>
+          <section className="flex items-center">
           <Image
             alt="Author"
             src={generalData.avatar}
@@ -106,7 +123,8 @@ export default function Home() {
             })}
           </div>
         </section>
-      </main>
+        </main>
+      </div>
     </>
   );
 }
