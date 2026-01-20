@@ -43,7 +43,7 @@ export default function RootLayout({
             <div className="min-h-screen w-full relative bg-background">
               {/* Dashed Bottom Fade Grid - Light Mode */}
               <div
-                className="absolute inset-0 z-0 dark:hidden"
+                className="fixed inset-0 z-0 dark:hidden"
                 style={{
                   backgroundImage: `
                     linear-gradient(to right, #e7e5e4 1px, transparent 1px),
@@ -91,7 +91,7 @@ export default function RootLayout({
               />
               {/* Dashed Bottom Fade Grid - Dark Mode */}
               <div
-                className="absolute inset-0 z-0 hidden dark:block"
+                className="fixed inset-0 z-0 hidden dark:block"
                 style={{
                   backgroundImage: `
                     linear-gradient(to right, rgba(229, 229, 229, 0.15) 1px, transparent 1px),
