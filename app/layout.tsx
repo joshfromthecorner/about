@@ -1,9 +1,11 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Inter, Figtree } from "next/font/google";
 import { ServerThemeProvider } from "next-themes";
 import Providers from "./providers";
 import { generalData } from "@/data/general";
 import type { Metadata } from "next";
+
+const figtree = Figtree({subsets:['latin'],variable:'--font-sans'});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,8 +37,8 @@ export default function RootLayout({
 }) {
   return (
     <ServerThemeProvider attribute="class">
-      <html lang="en">
-        <body className={inter.className}>
+      <html lang="en" className={figtree.variable}>
+        <body className="font-sans">
           <Providers>
             <div className="min-h-screen w-full relative">
               {/* Aurora Dream Soft Harmony - Light Mode */}
