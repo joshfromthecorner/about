@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ThemeSwitch from "@/components/theme-switch";
+import PdfButton from "@/components/pdf-button";
 import { generalData } from "@/data/general";
 import { contentData } from "@/data/content";
 import type { Content } from "@/data/content";
@@ -128,6 +129,9 @@ export default function Home() {
   return (
     <>
       <main className="max-w-xl mx-auto px-6 py-20 relative min-h-screen font-light">
+        <div className="absolute top-6 left-6">
+          <PdfButton />
+        </div>
         <div className="absolute top-6 right-6">
           <ThemeSwitch />
         </div>
