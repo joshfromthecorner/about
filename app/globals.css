@@ -79,19 +79,10 @@
     --font-sans: var(--font-sans);
   }
   * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-}
-
-@layer base {
-  * {
     @apply border-border;
   }
   body {
-    @apply text-foreground;
+    @apply bg-background text-foreground;
     background: transparent;
   }
 }
