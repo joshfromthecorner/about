@@ -14,16 +14,16 @@ const Content: React.FC<ContentProps> = ({ title, items }) => {
         {items.map((item, index) => {
           return (
             <div className="flex" key={index}>
-              <div className="mr-8 min-w-[100px] max-w-[100px] w-full text-slate-400 dark:text-slate-400">
+              <div className="mr-8 min-w-[100px] max-w-[100px] w-full text-slate-500 dark:text-slate-300">
                 {item.date}
               </div>
               <div className="flex flex-col flex-1">
                 <h3 className="text-slate-900 dark:text-slate-100">{item.title}</h3>
-                <p className="text-slate-600 dark:text-gray-400">
+                <p className="text-slate-600 dark:text-slate-300">
                   {item.subTitle}
                 </p>
                 {item.description ? (
-                  <p className="text-slate-600 dark:text-gray-400 mt-2">
+                  <p className="text-slate-600 dark:text-slate-300 mt-2">
                     {item.description}
                   </p>
                 ) : null}
@@ -93,7 +93,7 @@ export default function Home() {
             {generalData.contacts.map((contact, index) => {
               return (
                 <div className="flex" key={index}>
-                  <div className="mr-8 min-w-[100px] max-w-[100px] w-full text-slate-400 dark:text-slate-400">
+                  <div className="mr-8 min-w-[100px] max-w-[100px] w-full text-slate-500 dark:text-slate-300">
                     {contact.label}
                   </div>
                   <div className="flex flex-col flex-1 text-slate-900 dark:text-slate-100">
